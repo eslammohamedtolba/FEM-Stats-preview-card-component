@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(244, 38%, 16%);
+    color: white;
+    width: 70%;
+    height: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main .text {
+    padding: 70px;
+    width: 100%;
+}
+main .text h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 35px;
+}
+main .text h1 span{
+    color: hsl(277, 64%, 61%);
+}
+main article p {
+    margin: 40px 0;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+main article .description {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+}
+main article .description .mark{
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.75);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 5px;
+}
+main article img {
+    height: 100%;
+    width: 100%;
+}
+.image {
+    position: relative;
+}
+.image::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.5;
+}
+@media (max-width: 375px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100%/3) calc(100%/3*2);
+        width: 90%;
+        height: 90%;
+    }
+    main .text {
+        order: 2;
+        padding: 35px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    main .text h1 {
+        font-size: 29px;
+    }
+    main article img {
+        order: 1;
+        height: 100%;
+        width: 100%;
+    }
+    main .text p {
+        margin: 10px 0;
+    }
+    main .text .description {
+        flex-direction: column;
+        padding: 0;
+    }
+}
